@@ -45,10 +45,10 @@ fn main() {
     let second_number = input.trim().parse::<f64>().unwrap();
 
     let result = calculate(match operation {
-        Operation::Add(_, b) => Operation::Add(first_number, second_number), 
-        Operation::Subtract(_, b) => Operation::Subtract(first_number, second_number),
-        Operation::Multiply(_, b) => Operation::Multiply(first_number, second_number),
-        Operation::Divide(_, b) => Operation::Divide(first_number, second_number),
+        Operation::Add(_, b) => Operation::Add(first_number, b),
+        Operation::Subtract(_, b) => Operation::Subtract(first_number, b),
+        Operation::Multiply(_, b) => Operation::Multiply(first_number, b),
+        Operation::Divide(_, b) => Operation::Divide(first_number, b),
     });
 
     println!("The result is: {}", result);
